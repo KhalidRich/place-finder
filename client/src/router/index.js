@@ -4,6 +4,9 @@ import HelloWorld from '@/components/HelloWorld'
 import Places from '@/components/Places'
 import NewPlace from '@/components/NewPlace'
 import SearchPage from '@/components/SearchPage'
+import Login from '@/components/Login'
+import AuthCallback from '@/components/AuthCallback'
+import Liked from '@/components/Liked'
 
 Vue.use(Router)
 
@@ -12,8 +15,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'SearchPage',
+      component: SearchPage
+    },
+    {
+      path: '/auth/callback',
+      name: 'AuthCallback',
+      component: AuthCallback
     },
     {
       path: '/places',
@@ -29,6 +37,11 @@ export default new Router({
       path: '/search',
       name: 'SearchPage',
       component: SearchPage
-    }
+    },
+    {
+      path: '/liked',
+      name: 'Liked',
+      component: Liked
+    }    
   ]
 })

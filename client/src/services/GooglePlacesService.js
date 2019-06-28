@@ -13,7 +13,8 @@ export default {
     const locationStr = `${location.lat},${location.lng}`
     const radius=2.2
     const queryString = `${format}?key=${googleApiKey}&input=${searchTerm}&inputtype=${inputtype}&location=${locationStr}`
-    const requestUri = `{https://maps.googleapis.com/maps/api/place/${queryString}`
+    const requestUri = `https://maps.googleapis.com/maps/api/place/nearbysearch/${queryString}`
+    alert(`Making request to ${requestUri}`)
     return axios.get(requestUri)
   }
 }
